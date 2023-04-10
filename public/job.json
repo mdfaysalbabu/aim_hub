@@ -1,0 +1,28 @@
+{
+    "job": [
+      { 
+        "id":"1",
+        "name": "Account & Finance",
+        "jobs": "200 Jobs Available"
+        
+      },
+      { 
+        "id":"2",
+        "name": "Software & Engineer",
+        "jobs": "300 Jobs Available"
+        
+      },
+      { 
+        "id":"3",
+        "name": "Technical & Engineer",
+        "jobs": "400 Jobs Available"
+        
+      },
+      { 
+        "id":"4",
+        "name": "E-Commerce",
+        "jobs": "500 Jobs Available"
+        
+      }
+    ]
+}

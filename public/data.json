@@ -1,0 +1,57 @@
+{
+  "jobs": [
+    { 
+      "id":"1",
+      "company": "Google",
+      "position": "Software Engineer",
+      "location": "Mountain View, CA",
+      "description": "Join our team to build products that make a difference in people's lives.",
+      "responsibilities": "Design and develop software systems that power Google's products.",
+      "qualification": "BS degree in Computer Science or related technical field, or equivalent practical experience.",
+      "experience": "2+ years of software development experience in one or more general purpose programming languages,",
+      "Educational Requirements":"Bachelor degree to complete any reputational university.",
+      "Salary ":"100K - 150K",
+      "image":"https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png"
+    },
+    {
+      "id":"2",
+      "company": "Google",
+      "position": "Technical Database Engineer",
+      "location": "Mountain View, CA",
+      "description": "Join our team to build products that make a difference in people's lives.",
+      "responsibilities": "Design and develop software systems that power Google's products.",
+      "qualification": "BS degree in Computer Science or related technical field, or equivalent practical experience.",
+      "experience": "3+ years of software development experience in one or more general purpose programming languages,",
+      "Educational Requirements":"Bachelor degree to complete any university.",
+      "Salary ":"50K - 100K",
+      "image":"https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png"
+    },
+    {
+      "id":"3",
+      "company": "Netflix",
+      "position": "Front End Developer",
+      "location": "Los Gatos, CA",
+      "description": "Join our team to build the world's best streaming experience.",
+      "responsibilities":  "Develop and maintain high-quality user interfaces for Netflix's web and mobile applications.",
+       "qualification": "BS degree in Computer Science or related technical field, or equivalent practical experience.",
+      "experience": "3+ years of experience in developing web applications.",
+      "Educational Requirements":"Bachelor degree to complete any university.",
+      "Salary ":"100K - 200K",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+    },
+    {
+      "id":"4",
+      "company": "Tesla",
+      "position": "Full Stack Engineer",
+      "location": "Fremont, CA",
+      "description": "Join our team to accelerate the world's transition to sustainable energy.",
+      "responsibilities": 
+        "Design and develop full-stack software systems that power Tesla's products.",
+      "qualification": "BS degree in Computer Science or related technical field",
+      "experience": "5+ years of experience in building web applications using one or more general purpose programming languages",
+      "Educational Requirements":"Bachelor degree to complete any  university.",
+      "Salary ":"200k - 250k",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmRFgkIOtjqyzfEl16HDgjn5BV3lO7AzT_Kg&usqp=CAU"
+    }
+  ]
+}
