@@ -58,6 +58,9 @@ const Statistics = () => {
 
   return (
     <>
+    <div className="bg-gray-100 w-full  pb-20 mb-10 pt-10 ">
+        <h1 className="text-center font-bold text-2xl">Statistics</h1>
+      </div>
     <h2 className="text-4xl font-bold my-11 text-center">ComposedChart</h2>
       <div className="mt-20 justify-center items-center text-center flex mb-10">
         <div style={{ width: "80%", height: "400px" }}>

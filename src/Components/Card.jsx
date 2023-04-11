@@ -11,8 +11,8 @@ const Card = ({ product }) => {
         <h1 className="text-xl font-bold">{position}</h1>
         <h5>{company}</h5>
         <div className="flex gap-3">
-          <button>{site}</button>
-          <button>{time}</button>
+          <button className="btn-outline">{site}</button>
+          <button className="btn-outline">{time}</button>
         </div>
         <div className="flex gap-4">
           <p className="flex"><MapPinIcon className="w-4 bg-white text-gray-400"></MapPinIcon>{location}</p>

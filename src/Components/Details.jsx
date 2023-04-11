@@ -11,7 +11,6 @@ import {
 import { addToDb } from "./Utilites/Fakedb";
 
 const Details = () => {
-    
   const params = useParams();
   console.log(params);
   const data = useLoaderData();
@@ -30,22 +29,18 @@ const Details = () => {
     email,
   } = total;
 
-  
-
-  const handleAddToCart=(id)=>{
-    console.log(id)
-
+  const handleAddToCart = (id) => {
+    console.log(id);
 
     // SetCart(newCart)
-    addToDb(id)
+    addToDb(id);
+  };
 
-}
-
-//   console.log(total);
+  //   console.log(total);
 
   return (
-    <div>
-      <div className="bg-gray-100  pt-14 pb-20 mb-10 px-5 py-16  ">
+    <div className="">
+      <div className="bg-gray-100  pt-14 pb-20  px-5   ">
         <h1 className="text-center font-bold text-2xl">Job Details</h1>
       </div>
       <div className="md:flex px-5 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-28  lg:px-20 lg:py-20 gap-4 ">
@@ -69,7 +64,7 @@ const Details = () => {
             {experience}
           </p>
         </div>
-        <div className="border bg-purple-200 text-start p-4 flex-cols w-full">
+        <div className="border bg-purple-200 text-start p-4 flex-cols w-full ">
           <h3 className="font-bold  mb-2 ">Job Details</h3>
           <hr className="bg-gray-300" />
           <p className="flex items-center justify-start gap-2">
@@ -109,8 +104,15 @@ const Details = () => {
               {location}
             </div>
           </p>
+          <div className="text-center  mt-12  buttonMain ">
+            <button
+              onClick={() => handleAddToCart(id)}
+              className=" inline-block p-1 "
+            >
+              Apply Now
+            </button>
+          </div>
         </div>
-        <Link to="/cart"><button onClick={()=>handleAddToCart(id)} className="btn inline-block">Apply Now</button></Link>
       </div>
     </div>
   );

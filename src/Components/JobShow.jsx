@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const JobShow = ({ job }) => {
   console.log(job);
-  const { position, location, salary, company, image, site, time } = job;
+  const { position, location, salary, company, image, site, time,id } = job;
   return (
     <div>
-      
-      <div className="flex mb-10 border rounded-lg shadow-lg p-8 items-center ">
+      <div className="md:flex lg:flex mb-10 border rounded-lg shadow-lg p-8 items-center ">
         <div className="w-60 h-40 flex justify-center items-center rounded-lg img-background">
           <img
             className="w-40 h-24 shadow-xl object cover  p-3 bg-gray-100 rounded"
@@ -32,8 +32,8 @@ const JobShow = ({ job }) => {
             </div>
           </div>
         </div>
-        <div>
-          <button className="buttonMain">View Details</button>
+        <div className="text-center">
+          <Link to={`../details/${id}`}><button className="buttonMain">View Details</button></Link>
         </div>
       </div>
     </div>
