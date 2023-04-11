@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
-    CalculatorIcon,
-    LightBulbIcon,
-    AcademicCapIcon,
-    BanknotesIcon,
-  } from "@heroicons/react/24/solid";
+  CalculatorIcon,
+  LightBulbIcon,
+  AcademicCapIcon,
+  BanknotesIcon,
+} from "@heroicons/react/24/solid";
 import { Link, useLoaderData } from "react-router-dom";
 import Card from "./Card";
+import Apply from "./Apply";
 
 const Home = () => {
-    const products=useLoaderData()
+  const [catData, Setcategory] = useState([]);
+
+  useEffect(() => {
+    fetch("../../public/job.json")
+      .then((rse) => rse.json())
+      .then((data) => Setcategory(data));
+  }, []);
+
+  const [datas, SetData] = useState([]);
+  const products = useLoaderData();
+  useEffect(() => {
+    const items = products.jobs.slice(0, 4);
+    SetData(items);
+  }, [products]);
+
+  const showAll = () => {
+    SetData(products);
+    document.getElementById("show").style.display = "none";
+  };
+
   return (
     <>
       <div className="my-container flex flex-col items-center justify-between lg:flex-row bg-gray-100">
@@ -97,6 +117,12 @@ const Home = () => {
             <Card product={product}></Card>
           ))}
         </div>
+
+        {/* {catData.map((category) => (category = { category }))} */}
+
+        <button onClick={showAll} id="show" className="">
+          Show All
+        </button>
       </section>
     </>
   );

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MapPinIcon,CurrencyDollarIcon} from '@heroicons/react/24/solid'
 
 const Card = ({ product }) => {
-  const { company, location, Salary, position, image, id } = product;
+  const { company, location, salary, position, image, id,site,time } = product;
   return (
     <div className="grid ">
       <div className="card text-start mt-4 border gap-4 mx-3 p-4  ">
@@ -10,12 +11,12 @@ const Card = ({ product }) => {
         <h1 className="text-xl font-bold">{position}</h1>
         <h5>{company}</h5>
         <div className="flex gap-3">
-          <button>Remote</button>
-          <button>Full Time</button>
+          <button>{site}</button>
+          <button>{time}</button>
         </div>
-        <div className="flex gap-3">
-          <p>{location}</p>
-          <p>{Salary}</p>
+        <div className="flex gap-4">
+          <p className="flex"><MapPinIcon className="w-4 bg-white text-gray-400"></MapPinIcon>{location}</p>
+          <p className="flex gap-1 items-center justify-center text-center"><CurrencyDollarIcon className="w-4 text-center text-gray-400"></CurrencyDollarIcon> salary: {salary}</p>
         </div>
         <Link to={`../details/${id}`}>
           <button

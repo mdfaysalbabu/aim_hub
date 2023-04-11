@@ -9,9 +9,9 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home';
 import Statistics from './Components/Statistics';
-import Applied from './Components/Applied';
 import Blog from './Components/Blog';
 import Details from './Components/Details';
+import CartDetails from './Components/CartDetails';
 
 const router=createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const router=createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('data.json')
+        loader:()=>fetch('../public/data.json')
       },
       {
         path:"details/:id",
@@ -38,8 +38,9 @@ const router=createBrowserRouter([
         element:<Blog></Blog>
       },
       {
-        path:'applied',
-        element:<Applied></Applied>
+        path:'cart',
+        element:<CartDetails></CartDetails>,
+        loader:()=>fetch('../public/data.json')
       }
     ]
   }
