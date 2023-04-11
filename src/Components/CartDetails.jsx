@@ -6,7 +6,7 @@ import JobShow from "./JobShow";
 const CartDetails = () => {
   const jobSet = useLoaderData();
   const [cart, SetCart] = useState([]);
-  const[isFilter,SetIsFilter]=useState([])
+  const[isFilter,SetIsFilter]=useState(false)
   useEffect(() => {
     const storeCart = getShoppingCart();
     const saveCart = [];
@@ -15,14 +15,15 @@ const CartDetails = () => {
       if (addedCart) {
         saveCart.push(addedCart);
       }
+     
     }
     SetCart(saveCart);
   }, [jobSet]);
-
-  const handleFilter=()=>{
-    const all=jobSet.filter(pd=>pd.site===cart.site)
-    SetIsFilter(all)
-  }
+  
+  
+    
+    
+  
 
   return (
     <div>
@@ -31,13 +32,14 @@ const CartDetails = () => {
       </div>
 
       <section className="text-right mr-20 ">
-        <button onClick={handleFilter} className="mr-2 buttonMain">Onset Jobs</button>
+        <button   className="mr-2 buttonMain">Onset Jobs</button>
         <button className="buttonMain">Remote Jobs</button>
       </section>
       <div className="gap-4 md:mx-16  lg:mx-16 h-20 mb-10 mt-10">
         {cart.map((job) => (
           <JobShow job={job} key={job.id}></JobShow>
         ))}
+        
       </div>
     </div>
   );
