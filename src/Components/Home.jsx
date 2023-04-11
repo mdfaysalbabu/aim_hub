@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  CalculatorIcon,
-  LightBulbIcon,
-  AcademicCapIcon,
-  BanknotesIcon,
-} from "@heroicons/react/24/solid";
+
 import { Link, useLoaderData } from "react-router-dom";
 import Card from "./Card";
 import Apply from "./Apply";
@@ -50,7 +45,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col items-center md:flex-row">
-            <Link to="/books" className="buttonMain  md:w-auto md:mr-4">
+            <Link to="/new" className="buttonMain  md:w-auto md:mr-4">
               <div className="inline-flex items-center justify-center w-full h-full">
                 <button className="mr-3 p-2">Get Started</button>
               </div>
