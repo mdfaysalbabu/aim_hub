@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { BriefcaseIcon, Bars3BottomRightIcon,XMarkIcon } from '@heroicons/react/24/solid'
+import {
+  BriefcaseIcon,
+  Bars3BottomRightIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -17,6 +21,14 @@ const Header = () => {
 
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              Home
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/statistics"
@@ -80,8 +92,13 @@ const Header = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
+                      <Link to="/" className="default">
+                        Home
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/statistics" className="default">
-                      Statistics
+                        Statistics
                       </Link>
                     </li>
                     <li>
@@ -100,14 +117,18 @@ const Header = () => {
                         Blog
                       </Link>
                     </li>
-                    <button className="btn">Start Applying</button>
+                    <div className="buttonMain text-center">
+                      <button className="p-1 ">Start Applying</button>
+                    </div>
                   </ul>
                 </nav>
               </div>
             </div>
           )}
         </div>
-        <button className="btn">Start Applying</button>
+        <div className="buttonMain">
+          <button className="p-2">Start Applying</button>
+        </div>
       </div>
     </div>
   );

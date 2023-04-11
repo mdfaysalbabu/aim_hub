@@ -13,15 +13,15 @@ const Home = () => {
   const [catData, Setcategory] = useState([]);
 
   useEffect(() => {
-    fetch("../../public/job.json")
-      .then((rse) => rse.json())
+    fetch("/job.json")
+      .then((res) => res.json())
       .then((data) => Setcategory(data));
   }, []);
 
-  const [datas, SetData] = useState([]);
+  const [data, SetData] = useState([]);
   const products = useLoaderData();
   useEffect(() => {
-    const items = products.jobs.slice(0, 4);
+    const items = products.slice(0, 4);
     SetData(items);
   }, [products]);
 
@@ -34,12 +34,12 @@ const Home = () => {
     <>
       <div className="my-container flex flex-col items-center justify-between lg:flex-row bg-gray-100">
         {/* Text Content */}
-        <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0">
-          <div className="max-w-xl mb-6 lg:mt-8">
+        <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0 pl-20">
+          <div className="max-w-xl mb-4 lg:mt-8 ">
             <h2 className="max-w-lg mb-6 font-sans text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              One Step <br className="hidden md:block text-6xl" /> Closer To
-              Your{" "}
-              <span className="inline-block text-blue-400 text-5xl">
+              <span className="text-5xl font-bold pb-1">One Step</span> <br /> <span className="text-5xl font-bold ">Closer To
+              Your</span>
+              <span className="inline-block text-violet-400 text-5xl pt-1">
                 Dream Job
               </span>
             </h2>
@@ -50,17 +50,17 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col items-center md:flex-row">
-            <Link to="/books" className="btn md:w-auto md:mr-4">
+            <Link to="/books" className="buttonMain  md:w-auto md:mr-4">
               <div className="inline-flex items-center justify-center w-full h-full">
-                <p className="mr-3">Get Started</p>
+                <button className="mr-3 p-2">Get Started</button>
               </div>
             </Link>
           </div>
         </div>
         {/* Lottie Animation */}
         <div className="relative lg:w-1/2 ">
-          <div className="w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96">
-            <img
+          <div className="w-full lg:w-5/6 lg:ml-auto h-56  sm:h-96">
+            <img className="p-10"
               src="https://img.lovepik.com/free-png/20211214/lovepik-business-man-leaving-his-job-sad-png-image_401612240_wh300.png"
               alt=""
             />
@@ -68,61 +68,38 @@ const Home = () => {
         </div>
       </div>
       <section className="mb-10 ">
-        <h2 className="text-4xl text-center mb-4">Job Category List</h2>
-        <p className="text-center mb-5">
-          Explore thousands of job opportunities with all the information you
-          need. Its your future
-        </p>
-        <div className="grid md:grid-cols-4 my-container items-center justify-center text-center gap-4 ">
-          <div className="border text-start p-3 shadow-xl">
-            <span className="border shadow-xl">
-              <CalculatorIcon className="w-10 shadow-xl border p-2"></CalculatorIcon>
-            </span>
-            <h4 className="font-bold">Account & Finance</h4>
-            <p>300 Jobs Available</p>
-          </div>
-          <div className="border text-start p-3 shadow-xl">
-            <span className="border shadow-xl">
-              <LightBulbIcon className="w-10 shadow-xl border p-2"></LightBulbIcon>
-            </span>
-            <h4 className="font-bold">Account & Finance</h4>
-            <p>300 Jobs Available</p>
-          </div>
-          <div className="border text-start p-3 shadow-xl">
-            <span>
-              <AcademicCapIcon className="w-10 shadow-xl border p-2"></AcademicCapIcon>
-            </span>
-            <h4 className="font-bold mt-5">Account & Finance</h4>
-            <p>300 Jobs Available</p>
-          </div>
-          <div className="border text-start p-4 shadow-xl">
-            <span>
-              <BanknotesIcon className="w-10 shadow-xl border p-2"></BanknotesIcon>
-            </span>
-            <h4 className="font-bold mt-5">Account & Finance</h4>
-            <p>300 Jobs Available</p>
-          </div>
+        <div>
+          <h2 className="text-4xl text-center mb-4 mt-5">Job Category List</h2>
+          <p className="text-center mb-5 m-5">
+            Explore thousands of job opportunities with all the information you
+            need. Its your future
+          </p>
+        </div>
+        <div className="grid md:grid-cols-4 mx-28  items-center justify-center text-center gap-4 ">
+          {catData.map((category) => (
+            <Apply category={category}></Apply>
+          ))}
         </div>
       </section>
+
       <section className="mb-10">
         <div>
           <h2 className="text-center text-3xl mb-4">Featured Jobs</h2>
-          <p className="text-center">
+          <p className="text-center m-5">
             Explore thousands of job opportunities with all the information you
             need. Its your future
           </p>
         </div>
         <div className="grid md:grid-cols-2 card text-center justify-center items-center mx-28 ">
-          {products.jobs.map((product) => (
+          {data.map((product) => (
             <Card product={product}></Card>
           ))}
         </div>
-
-        {/* {catData.map((category) => (category = { category }))} */}
-
-        <button onClick={showAll} id="show" className="">
-          Show All
-        </button>
+        <div className="text-center mt-8 ">
+          <button onClick={showAll} id="show" className="text-center buttonMain ">
+            Show All
+          </button>
+        </div>
       </section>
     </>
   );

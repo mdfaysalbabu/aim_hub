@@ -1,28 +1,30 @@
-{
-    "job": [
+ [
       { 
         "id":"1",
-        "name": "Account & Finance",
-        "jobs": "200 Jobs Available"
+        "Name":"Account & Finance",
+        "Jobs":"200 Jobs Available",
+        "image":"https://cdn-icons-png.flaticon.com/512/2596/2596510.png"
         
       },
       { 
         "id":"2",
-        "name": "Software & Engineer",
-        "jobs": "300 Jobs Available"
+        "Name":"Software & Engineer",
+        "Jobs":"300 Jobs Available",
+        "image":"https://www.quickprint.co.uk/app/uploads/2022/02/Design-LogoC.jpg"
         
       },
       { 
         "id":"3",
-        "name": "Technical & Engineer",
-        "jobs": "400 Jobs Available"
+        "Name":"Technical & Engineer",
+        "Jobs":"400 Jobs Available",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaf3KxHgdg5fsga9BWhNMKvaF63AUsgeA9sQ&usqp=CAU"
         
       },
       { 
         "id":"4",
-        "name": "E-Commerce",
-        "jobs": "500 Jobs Available"
+        "Name":"E-Commerce",
+        "Jobs":"500 Jobs Available",
+        "image":"https://media.istockphoto.com/id/1366721822/vector/human-brain-inside-a-computer-cpu-chip-artificial-intelligence-concept.jpg?s=612x612&w=0&k=20&c=Rf-2WBj07D6GvmXEOVPAeoT9g_BXAqULGiMr1oNulK4="
         
       }
     ]
-}

@@ -5,10 +5,8 @@ const JobShow = ({ job }) => {
   const { position, location, salary, company, image, site, time } = job;
   return (
     <div>
-      <div className="bg-gray-100 w-full  pb-20 mb-10 px-6 py-16  ">
-        <h1 className="text-center font-bold text-2xl">Job Details</h1>
-      </div>
-      <div className="flex mb-6 border rounded-lg shadow-lg p-8 items-center">
+      
+      <div className="flex mb-10 border rounded-lg shadow-lg p-8 items-center ">
         <div className="w-60 h-40 flex justify-center items-center rounded-lg img-background">
           <img
             className="w-40 h-24 shadow-xl object cover  p-3 bg-gray-100 rounded"
@@ -21,10 +19,10 @@ const JobShow = ({ job }) => {
             <p className="font-bold text-xl">{position}</p>
             <p className="mt-2 mn-4">{company}</p>
             <div className="flex gap-3">
-              <button className="rounded border-2 py-1 px-5 mb-3 mt-3 ">
+              <button className="btn-outline">
                 {site}
               </button>
-              <button className="rounded border-2 py-1 px-5 mb-3 mt-3">
+              <button className="btn-outline">
                 {time}
               </button>
             </div>
@@ -35,7 +33,7 @@ const JobShow = ({ job }) => {
           </div>
         </div>
         <div>
-          <button>View Details</button>
+          <button className="buttonMain">View Details</button>
         </div>
       </div>
     </div>

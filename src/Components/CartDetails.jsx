@@ -10,7 +10,7 @@ const CartDetails = () => {
     const storeCart = getShoppingCart();
     const saveCart = [];
     for (const id in storeCart) {
-      const addedCart = jobSet.jobs.find((job) => job.id === id);
+      const addedCart = jobSet.find((job) => job.id === id);
       if (addedCart) {
         saveCart.push(addedCart);
       }
@@ -20,8 +20,10 @@ const CartDetails = () => {
 
   return (
     <div>
-      
-        <div className= "gap-6 mx-20  h-20">
+       <div className="bg-gray-100 w-full  pb-20 mb-10 pt-10 ">
+        <h1 className="text-center font-bold text-2xl">Job Details</h1>
+      </div>
+        <div className= "gap-6 mx-20  h-20 mb-10 mt-10">
           {cart.map((job) => (
             <JobShow job={job} key={job.id}></JobShow>
           ))}

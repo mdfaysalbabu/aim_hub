@@ -16,7 +16,7 @@ const Details = () => {
   console.log(params);
   const data = useLoaderData();
 
-  const total = data.jobs.find((pd) => pd.id === params.id);
+  const total = data.find((pd) => pd.id === params.id);
   const {
     id,
     description,
