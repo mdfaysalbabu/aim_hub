@@ -32,11 +32,11 @@ const Details = () => {
   const handleAddToCart = (id) => {
     console.log(id);
 
-    // SetCart(newCart)
+    
     addToDb(id);
   };
 
-  //   console.log(total);
+  
 
   return (
     <div className="">

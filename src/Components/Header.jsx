@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
-        {/* Logo Section */}
+        
         <Link to="/" className="inline-flex items-center">
           <BriefcaseIcon className="h-6 w-6 text-blue-500" />
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
@@ -19,7 +19,7 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Nav Items Section */}
+        
         <ul className="items-center hidden space-x-8 lg:flex">
           <li>
             <NavLink
@@ -54,9 +54,9 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        {/* Mobile Navbar Section */}
+        
         <div className="lg:hidden">
-          {/* Dropdown Open Button */}
+          
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -67,7 +67,7 @@ const Header = () => {
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full z-10">
               <div className="p-5 bg-white border rounded shadow-sm">
-                {/* Logo & Button section */}
+                
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <Link to="/" className="inline-flex items-center">
@@ -77,7 +77,7 @@ const Header = () => {
                       </span>
                     </Link>
                   </div>
-                  {/* Dropdown menu close button */}
+                  
                   <div>
                     <button
                       aria-label="Close Menu"
@@ -88,7 +88,7 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
-                {/* Mobile Nav Items Section */}
+                
                 <nav>
                   <ul className="space-y-4">
                     <li>

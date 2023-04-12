@@ -6,3 +6,4 @@
 * click view details button then links to a job detail page
 * other category display 4 card category thats name job category list
 * Feature job card display company logo,company name,location,salary,onsite and full time .
+# https://peaceful-fudge-892ad2.netlify.app/
