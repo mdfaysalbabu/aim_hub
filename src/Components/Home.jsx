@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="my-container flex flex-col items-center justify-between lg:flex-row bg-gray-100">
+      <div className="my-container flex flex-col items-center justify-between  lg:flex-row bg-gray-100">
         {/* Text Content */}
         <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0 pl-20">
           <div className="max-w-xl mb-4 lg:mt-8 ">
@@ -53,10 +53,10 @@ const Home = () => {
           </div>
         </div>
         {/* Lottie Animation */}
-        <div className="relative lg:w-1/2 ">
-          <div className="w-full lg:w-5/6 lg:ml-auto h-56  sm:h-96">
-            <img className="p-10"
-              src="https://img.lovepik.com/free-png/20211214/lovepik-business-man-leaving-his-job-sad-png-image_401612240_wh300.png"
+        <div className="relative w-4/6 md:w-1/2 lg:w-1/2">
+          <div className="w-full lg:w-4/5 lg:ml-auto h-56  sm:h-full ">
+            <img className="p-5 "
+              src="https://i.ibb.co/mCmf72d/P3-OLGJ1-copy-1.png"
               alt=""
             />
           </div>
